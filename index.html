@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h2>CALCULATOR</h2>
+    </div>
+    <div class="container">
+        <input type="text" placeholder="FirstNumber"  class="fnum"  id="fNum" >
+        <br><br>
+        <input type="text" placeholder="SecondNumber"  class="snum"  id="sNum" >
+        <br><br>
+        <select name="option" id="opr">
+            <option value="ADDITION">ADDITION</option>
+            <option value="SUBSTRACTION">SUBSTRACTION</option>
+            <option value="MULTIPICATION">MULTIPICATION</option>
+            <option value="DIVISION">DIVISION</option>
+        </select>
+        <br><br>
+        <button onclick="getValue()" value="sum">Calculate</button>
+        <br><br>
+        
+    </div>
+    <div class="mid">
+        <div class="middis"></div>
+    </div>
+    <div class="end">
+        <div class="display"></div>
+
+    </div>
+
+<script>
+    
+    alert('Thanks for coming');
+
+    getValue = () => {
+    var fNum = document.getElementById('fNum').value; 
+    var sNum = document.getElementById('sNum').value;
+    var opr = document.getElementById('opr').value;
+    var res;
+
+    if(opr==="ADDITION"){
+        var res = parseInt(fNum)+parseInt(sNum);
+    }
+    if(opr==="SUBSTRACTION"){
+        var res = parseInt(fNum)-parseInt(sNum);
+    }
+    if(opr==='MULTIPICATION'){
+        var res = parseInt(fNum)*parseInt(sNum);
+    }
+    if(opr==="DIVISION"){
+        var res = parseInt(fNum)/parseInt(sNum);
+    }
+    var middisDiv = document.getElementsByClassName('middis')[0]; 
+    middisDiv.innerHTML=opr;
+
+    var displayDiv = document.getElementsByClassName('display')[0]; 
+   displayDiv.innerText = "Your answer is"+ res; 
+   displayDiv.style.color="red";
+   displayDiv.style.fontSize="20px";
+
+}
+
+   
+</script>
+</body>
+</html>

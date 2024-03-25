@@ -1,0 +1,28 @@
+.heading{
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    background-image: url('backPic.jpg');
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mid{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+.end{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
